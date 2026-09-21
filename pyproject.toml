@@ -4,12 +4,12 @@ version = "0.1.0"
 description = "CLI que propone mensajes de commit usando llm-client."
 requires-python = ">=3.12"
 dependencies = [
-    "llm-dev-client",
+    "llm-dev-core",
     "PyYAML>=6.0,<7",
 ]
 
 [tool.uv.sources]
-llm-dev-client = { path = "../llm-dev-core/packages/llm-client", editable = true }
+llm-dev-core = { path = "../llm-dev-core", editable = true }
 
 [project.scripts]
 commit-cli = "commit_cli.main:main"

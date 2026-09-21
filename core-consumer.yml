@@ -1,7 +1,7 @@
 # Manifest del consumidor. Contrato e inventario a la vez (ARCHITECTURE.md §2.1).
 week: 2
 name: commit-cli
-core_version: 0.1.0
+core_version: 0.3.0
 
 reused_modules:
   - llm-client
