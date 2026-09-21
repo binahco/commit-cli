@@ -1,0 +1,17 @@
+# Manifest del consumidor. Contrato e inventario a la vez (ARCHITECTURE.md §2.1).
+week: 2
+name: commit-cli
+core_version: 0.1.0
+
+reused_modules:
+  - llm-client
+
+new_surface:
+  - CLI que genera y propone mensaje de commit desde git diff
+  - prompt commit-message-generator (frontmatter + render)
+  - evals/commit-message-generator (seed)
+
+estimated_new_surface: 45
+
+# Presupuesto máximo de evals en USD por semana (ARCHITECTURE.md §8.1).
+eval_budget_usd: 2.0
