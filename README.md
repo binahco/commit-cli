@@ -50,7 +50,7 @@ Un span JSONL se emite a stderr por cada llamada (2.ª telemetría de la semana)
 
 ## Roadmap
 
-- [ ] Evaluación `eval-smoke` con el dataset de `evals/` (sem. 5, test-kit)
+- [x] Evaluación `eval-smoke` con el dataset de `evals/` (sem. 5, test-kit; ampliada a 3 casos congelados en el retrofit #0 de la sem. 6)
 - [ ] Soporte de `--amend`-aware (pegar el mensaje anterior como contexto)
 - [ ] Aviso de secretos sobre el diff antes de enviarlo
 - [ ] Retrofit al core si `opencode run` pediría un transport contenido (ver `retrofit-issue.md`)

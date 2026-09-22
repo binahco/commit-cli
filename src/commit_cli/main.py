@@ -29,7 +29,10 @@ def load_prompt() -> tuple[str, str, str]:
 def render_prompt(prompt_id: str, prompt_version: str, variables: dict) -> list[dict]:
     _, _, body = load_prompt()
     system_part = body.split("## Sistema\n", 1)[1].split("## Usuario\n", 1)[0].strip()
-    user_part = body.split("## Usuario\n", 1)[1].strip().format(diff=variables["diff"])
+    user_part = body.split("## Usuario\n", 1)[1].strip().format(
+        diff=variables["diff"],
+        language=variables.get("language", "es"),
+    )
     return [
         {"role": "system", "content": system_part},
         {"role": "user", "content": user_part},
@@ -93,7 +96,7 @@ def main(argv: list[str] | None = None) -> int:
         CompletionRequest(
             prompt_id=prompt_id,
             prompt_version=prompt_version,
-            variables={"diff": diff},
+            variables={"diff": diff, "language": "es"},
             model_alias="fast",
             tags=["commit-cli", "week-2"],
         )

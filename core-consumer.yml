@@ -5,11 +5,12 @@ core_version: 0.3.0
 
 reused_modules:
   - llm-client
+  - test-kit
 
 new_surface:
   - CLI que genera y propone mensaje de commit desde git diff
-  - prompt commit-message-generator (frontmatter + render)
-  - evals/commit-message-generator (seed)
+  - prompt commit-message-generator (frontmatter + render, lengua explícita desde v0.2.0)
+  - "evals/commit-message-generator: 3 casos congelados (retrofit #0, sem 6)"
 
 estimated_new_surface: 45
 
